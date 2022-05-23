@@ -47,6 +47,11 @@ body {
   background-color: #F9F9F9;
 }
 
+.photo.lazy {
+  background-image: none;
+  background-color: #F9F9F9;
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -119,8 +124,6 @@ body {
   position: relative;
   background: transparent;
   border: 1px solid #7998BC;
-  font: 12px/1.2 "Oswald", sans-serif;
-  letter-spacing: 0.4em;
   text-align: center;
   text-indent: 2px;
   text-transform: uppercase;
@@ -146,7 +149,8 @@ body {
   position: relative;
   z-index: 2;
   text-align: center;
-  font: normal normal 600 14px/19px;
+  font-size: 1.4rem;
+  font-weight: 600;
   letter-spacing: 1.4px;
   color: #7998BC;
   opacity: 1;
@@ -217,8 +221,7 @@ body {
 .slideshow .slide .caption .text {
   margin-top: 30px;
   text-align: center;
-  font: normal normal normal 14px/19px;
-  font-size: 14px;
+  font-size: 1.4rem;
   letter-spacing: 1.4px;
   color: #7998BC;
   opacity: 1;
@@ -242,7 +245,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
 }
 .slideshow .slide .image {
   width: 100%;
@@ -274,14 +277,12 @@ body {
 .slideshow .slide .title {
   margin: 0 auto 15px;
   max-width: 1000px;
-  font: 300 50px/1.2;
-  letter-spacing: 0.35em;
   text-transform: uppercase;
 }
 .slideshow .slide .text {
   margin: 0 auto;
   max-width: 1000px;
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 1.4;
 }
 .slideshow .slide .btn {
@@ -394,16 +395,16 @@ body {
 .contain .contain-1 .contain-1-1 .p1 {
   text-align: center;
   opacity: 1;
-  font: normal normal 300 18px/24px;
-  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 300;
   letter-spacing: 0px;
   color: #8A962B;
 }
 .contain .contain-1 .contain-1-1 .p2 {
   margin-top: 15px;
   text-align: center;
-  font: normal normal 600 24px/33px;
-  font-size: 24px;
+  font-size: 2.4rem;
+  font-weight: 600;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
@@ -411,8 +412,7 @@ body {
 .contain .contain-1 .contain-1-1 .p3 {
   margin-top: 25px;
   text-align: center;
-  font: normal normal normal 14px/24px Open Sans;
-  font-size: 14px;
+  font-size: 1.4rem;
   letter-spacing: 1.4px;
   color: #624835;
   text-transform: uppercase;
@@ -426,11 +426,19 @@ body {
   height: 190px;
   background: url("./assets/img/Shoot1-433-15.jpg") top center/cover no-repeat;
 }
+.contain .contain-1 .contain-1-3.lazy {
+  background-image: none;
+  background-color: #F9F9F9;
+}
 @media screen and (orientation: landscape) {
   .contain .contain-1 .contain-1-3 {
     width: 100%;
     height: 300px;
     background: url("./assets/img/Shoot1-433-15.jpg") top center/cover no-repeat;
+  }
+  .contain .contain-1 .contain-1-3.lazy {
+    background-image: none;
+    background-color: #F9F9F9;
   }
 }
 .contain .contain-2 {
@@ -453,16 +461,16 @@ body {
 .contain .contain-2 .contain-2-1 .p1 {
   text-align: center;
   opacity: 1;
-  font: normal normal 300 18px/24px;
-  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 300;
   letter-spacing: 0px;
   color: #8A962B;
 }
 .contain .contain-2 .contain-2-1 .p2 {
   margin-top: 15px;
   text-align: center;
-  font: normal normal 600 24px/33px;
-  font-size: 24px;
+  font-size: 2.4rem;
+  font-weight: 600;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
@@ -470,8 +478,7 @@ body {
 .contain .contain-2 .contain-2-1 .p3 {
   margin-top: 25px;
   text-align: center;
-  font: normal normal normal 14px/24px;
-  font-size: 14px;
+  font-size: 1.4rem;
   letter-spacing: 1.4px;
   color: #624835;
   text-transform: uppercase;
@@ -479,11 +486,6 @@ body {
 }
 .contain .contain-2 .contain-2-2 {
   display: none;
-  position: absolute;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  background: url("./assets/img/chambre22-123-15.jpg") top center/cover no-repeat;
 }
 .contain .contain-2 .contain-2-3 {
   width: 100%;
@@ -491,12 +493,20 @@ body {
   background: url("./assets/img/YRshoot1-2322-15.jpg") top center/cover no-repeat;
   transform: scaleX(-1);
 }
+.contain .contain-2 .contain-2-3.lazy {
+  background-image: none;
+  background-color: #F9F9F9;
+}
 @media screen and (orientation: landscape) {
   .contain .contain-2 .contain-2-3 {
     width: 100%;
     height: 280px;
     background: url("./assets/img/YRshoot1-2322-15.jpg") top center/cover no-repeat;
     transform: scaleX(-1);
+  }
+  .contain .contain-2 .contain-2-3.lazy {
+    background-image: none;
+    background-color: #F9F9F9;
   }
 }
 
@@ -525,11 +535,23 @@ body {
 .offre-container .offre .offre-photo.offre-photo-1 {
   background: url("./assets/img/offre1.jpg") top center/cover no-repeat;
 }
+.offre-container .offre .offre-photo.offre-photo-1.lazy {
+  background-image: none;
+  background-color: #F9F9F9;
+}
 .offre-container .offre .offre-photo.offre-photo-2 {
   background: url("./assets/img/offre2.jpg") top center/cover no-repeat;
 }
+.offre-container .offre .offre-photo.offre-photo-2.lazy {
+  background-image: none;
+  background-color: #F9F9F9;
+}
 .offre-container .offre .offre-photo.offre-photo-3 {
   background: url("./assets/img/offre3.jpg") top center/cover no-repeat;
+}
+.offre-container .offre .offre-photo.offre-photo-3.lazy {
+  background-image: none;
+  background-color: #F9F9F9;
 }
 .offre-container .offre .offre-info {
   position: absolute;
@@ -545,8 +567,8 @@ body {
   left: 50px;
   right: 50px;
   top: 60px;
-  font: normal normal 600 20px/27px;
-  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 600;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
@@ -557,8 +579,7 @@ body {
   top: 135px;
   right: 50px;
   margin-top: 10px;
-  font: normal normal normal 14px/24px;
-  font-size: 12px;
+  font-size: 1.2rem;
   letter-spacing: 0px;
   color: #624835;
   opacity: 1;
@@ -579,15 +600,14 @@ body {
   align-items: center;
 }
 .offre-container .offre .offre-info .offre-text2 .offre-text2-prix {
-  font: normal normal 300 24px/33px Open Sans;
-  font-size: 24px;
+  font-size: 2.4rem;
+  font-weight: 300;
   letter-spacing: 0px;
   color: #624835;
   opacity: 1;
 }
 .offre-container .offre .offre-info .offre-text2 .offre-text2-jour {
-  font: normal normal normal 12px/20px Open Sans;
-  font-size: 12px;
+  font-size: 1.2rem;
   letter-spacing: 0px;
   color: #624835;
   opacity: 1;
@@ -609,6 +629,11 @@ body {
   text-align: center;
   height: 45px;
   line-height: 45px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  color: #FFFFFF;
+  opacity: 1;
 }
 
 .footer {
@@ -624,6 +649,10 @@ body {
   background: url("./assets/img/logo.png") top center/cover no-repeat;
   width: 154px;
   height: 71px;
+}
+.footer .footer-photo.lazy {
+  background-image: none;
+  background-color: #F9F9F9;
 }
 
 @media screen and (min-width: 741px) {
@@ -716,8 +745,6 @@ body {
     position: relative;
     background: transparent;
     border: 1px solid #7998BC;
-    font: 12px/1.2 "Oswald", sans-serif;
-    letter-spacing: 0.4em;
     text-align: center;
     text-indent: 2px;
     text-transform: uppercase;
@@ -743,7 +770,8 @@ body {
     position: relative;
     z-index: 2;
     text-align: center;
-    font: normal normal 600 14px/19px;
+    font-size: 1.4rem;
+    font-weight: 600;
     letter-spacing: 1.4px;
     color: #7998BC;
     opacity: 1;
@@ -815,8 +843,7 @@ body {
   .slideshow .slide .caption .text {
     margin-top: 30px;
     text-align: center;
-    font: normal normal normal 14px/19px;
-    font-size: 14px;
+    font-size: 1.4rem;
     letter-spacing: 1.4px;
     color: #7998BC;
     opacity: 1;
@@ -876,8 +903,6 @@ body {
   .slideshow .slide .title {
     margin: 0 auto 15px;
     max-width: 1000px;
-    font: 300 50px/1.2;
-    letter-spacing: 0.35em;
     text-transform: uppercase;
   }
 }
@@ -885,7 +910,7 @@ body {
   .slideshow .slide .text {
     margin: 0 auto;
     max-width: 1000px;
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 1.4;
   }
 }
@@ -1006,23 +1031,22 @@ body {
   .contain .contain-1 .contain-1-1 .p1 {
     text-align: center;
     opacity: 1;
-    font: normal normal 300 18px/24px;
-    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 300;
     letter-spacing: 0px;
     color: #8A962B;
   }
   .contain .contain-1 .contain-1-1 .p2 {
     text-align: center;
-    font: normal normal 600 24px/33px;
-    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 600;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
   }
   .contain .contain-1 .contain-1-1 .p3 {
     text-align: center;
-    font: normal normal normal 14px/24px Open Sans;
-    font-size: 14px;
+    font-size: 1.4rem;
     letter-spacing: 1.4px;
     color: #624835;
     text-transform: uppercase;
@@ -1036,6 +1060,10 @@ body {
     height: 90%;
     background: url("./assets/img/Shoot1-433-15.jpg") top center/cover no-repeat;
   }
+  .contain .contain-1 .contain-1-2.lazy {
+    background-image: none;
+    background-color: #F9F9F9;
+  }
   .contain .contain-1 .contain-1-3 {
     position: absolute;
     width: 50%;
@@ -1043,6 +1071,10 @@ body {
     background: url("./assets/img/suite6-354-15.jpg") top center/cover no-repeat;
     right: 0px;
     bottom: 90px;
+  }
+  .contain .contain-1 .contain-1-3.lazy {
+    background-image: none;
+    background-color: #F9F9F9;
   }
   .contain .contain-2 {
     margin-top: 50px;
@@ -1065,23 +1097,22 @@ body {
   .contain .contain-2 .contain-2-1 .p1 {
     text-align: center;
     opacity: 1;
-    font: normal normal 300 18px/24px;
-    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 300;
     letter-spacing: 0px;
     color: #8A962B;
   }
   .contain .contain-2 .contain-2-1 .p2 {
     text-align: center;
-    font: normal normal 600 24px/33px;
-    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 600;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
   }
   .contain .contain-2 .contain-2-1 .p3 {
     text-align: center;
-    font: normal normal normal 14px/24px;
-    font-size: 14px;
+    font-size: 1.4rem;
     letter-spacing: 1.4px;
     color: #624835;
     text-transform: uppercase;
@@ -1095,6 +1126,10 @@ body {
     height: 100%;
     background: url("./assets/img/chambre22-123-15.jpg") top center/cover no-repeat;
   }
+  .contain .contain-2 .contain-2-2.lazy {
+    background-image: none;
+    background-color: #F9F9F9;
+  }
   .contain .contain-2 .contain-2-3 {
     position: absolute;
     width: 65%;
@@ -1103,6 +1138,10 @@ body {
     left: 0px;
     bottom: 35px;
     transform: scaleX(-1);
+  }
+  .contain .contain-2 .contain-2-3.lazy {
+    background-image: none;
+    background-color: #F9F9F9;
   }
 }
 @media screen and (min-width: 741px) {
@@ -1132,11 +1171,23 @@ body {
   .offre-container .offre .offre-photo.offre-photo-1 {
     background: url("./assets/img/offre1.jpg") top center/cover no-repeat;
   }
+  .offre-container .offre .offre-photo.offre-photo-1.lazy {
+    background-image: none;
+    background-color: #F9F9F9;
+  }
   .offre-container .offre .offre-photo.offre-photo-2 {
     background: url("./assets/img/offre2.jpg") top center/cover no-repeat;
   }
+  .offre-container .offre .offre-photo.offre-photo-2.lazy {
+    background-image: none;
+    background-color: #F9F9F9;
+  }
   .offre-container .offre .offre-photo.offre-photo-3 {
     background: url("./assets/img/offre3.jpg") top center/cover no-repeat;
+  }
+  .offre-container .offre .offre-photo.offre-photo-3.lazy {
+    background-image: none;
+    background-color: #F9F9F9;
   }
   .offre-container .offre .offre-info {
     position: absolute;
@@ -1152,8 +1203,8 @@ body {
     left: 50px;
     right: 50px;
     top: 60px;
-    font: normal normal 600 20px/27px;
-    font-size: 20px;
+    font-size: 2rem;
+    font-weight: 600;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
@@ -1164,8 +1215,7 @@ body {
     top: 135px;
     right: 50px;
     margin-top: 10px;
-    font: normal normal normal 14px/24px;
-    font-size: 12px;
+    font-size: 1.2rem;
     letter-spacing: 0px;
     color: #624835;
     opacity: 1;
@@ -1186,15 +1236,14 @@ body {
     align-items: center;
   }
   .offre-container .offre .offre-info .offre-text2 .offre-text2-prix {
-    font: normal normal 300 24px/33px Open Sans;
-    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 300;
     letter-spacing: 0px;
     color: #624835;
     opacity: 1;
   }
   .offre-container .offre .offre-info .offre-text2 .offre-text2-jour {
-    font: normal normal normal 12px/20px Open Sans;
-    font-size: 12px;
+    font-size: 1.2rem;
     letter-spacing: 0px;
     color: #624835;
     opacity: 1;
@@ -1216,6 +1265,11 @@ body {
     text-align: center;
     height: 45px;
     line-height: 45px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    color: #FFFFFF;
+    opacity: 1;
   }
 }
 @media screen and (min-width: 741px) {
@@ -1232,6 +1286,10 @@ body {
     background: url("./assets/img/logo.png") top center/cover no-repeat;
     width: 154px;
     height: 71px;
+  }
+  .footer .footer-photo.lazy {
+    background-image: none;
+    background-color: #F9F9F9;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -1304,8 +1362,6 @@ body {
     position: relative;
     background: transparent;
     border: 1px solid #7998BC;
-    font: 12px/1.2 "Oswald", sans-serif;
-    letter-spacing: 0.4em;
     text-align: center;
     text-indent: 2px;
     text-transform: uppercase;
@@ -1331,7 +1387,8 @@ body {
     position: relative;
     z-index: 2;
     text-align: center;
-    font: normal normal 600 14px/19px;
+    font-size: 1.4rem;
+    font-weight: 600;
     letter-spacing: 1.4px;
     color: #7998BC;
     opacity: 1;
@@ -1402,8 +1459,7 @@ body {
   .slideshow .slide .caption .text {
     margin-top: 30px;
     text-align: center;
-    font: normal normal normal 14px/19px;
-    font-size: 14px;
+    font-size: 1.4rem;
     letter-spacing: 1.4px;
     color: #7998BC;
     opacity: 1;
@@ -1450,14 +1506,12 @@ body {
   .slideshow .slide .title {
     margin: 0 auto 15px;
     max-width: 1000px;
-    font: 300 50px/1.2;
-    letter-spacing: 0.35em;
     text-transform: uppercase;
   }
   .slideshow .slide .text {
     margin: 0 auto;
     max-width: 1000px;
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 1.4;
   }
   .slideshow .slide .btn {
@@ -1570,23 +1624,22 @@ body {
   .contain .contain-1 .contain-1-1 .p1 {
     text-align: center;
     opacity: 1;
-    font: normal normal 300 18px/24px;
-    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 300;
     letter-spacing: 0px;
     color: #8A962B;
   }
   .contain .contain-1 .contain-1-1 .p2 {
     text-align: center;
-    font: normal normal 600 24px/33px;
-    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 600;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
   }
   .contain .contain-1 .contain-1-1 .p3 {
     text-align: center;
-    font: normal normal normal 14px/24px Open Sans;
-    font-size: 14px;
+    font-size: 1.4rem;
     letter-spacing: 1.4px;
     color: #624835;
     text-transform: uppercase;
@@ -1600,6 +1653,10 @@ body {
     height: 100%;
     background: url("./assets/img/Shoot1-433-15.jpg") top center/cover no-repeat;
   }
+  .contain .contain-1.lazy {
+    background-image: none;
+    background-color: #F9F9F9;
+  }
   .contain .contain-1 .contain-1-3 {
     position: absolute;
     width: 45%;
@@ -1607,6 +1664,10 @@ body {
     background: url("./assets/img/suite6-354-15.jpg") top center/cover no-repeat;
     right: 0px;
     bottom: 35px;
+  }
+  .contain .contain-1 .contain-1-3.lazy {
+    background-image: none;
+    background-color: #F9F9F9;
   }
   .contain .contain-2 {
     margin-top: 100px;
@@ -1628,23 +1689,22 @@ body {
   .contain .contain-2 .contain-2-1 .p1 {
     text-align: center;
     opacity: 1;
-    font: normal normal 300 18px/24px;
-    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 300;
     letter-spacing: 0px;
     color: #8A962B;
   }
   .contain .contain-2 .contain-2-1 .p2 {
     text-align: center;
-    font: normal normal 600 24px/33px;
-    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 600;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
   }
   .contain .contain-2 .contain-2-1 .p3 {
     text-align: center;
-    font: normal normal normal 14px/24px;
-    font-size: 14px;
+    font-size: 1.4rem;
     letter-spacing: 1.4px;
     color: #624835;
     text-transform: uppercase;
@@ -1658,6 +1718,10 @@ body {
     height: 100%;
     background: url("./assets/img/chambre22-123-15.jpg") top center/cover no-repeat;
   }
+  .contain .contain-2 .contain-2-2.lazy {
+    background-image: none;
+    background-color: #F9F9F9;
+  }
   .contain .contain-2 .contain-2-3 {
     position: absolute;
     width: 65%;
@@ -1666,6 +1730,10 @@ body {
     left: 0px;
     bottom: 35px;
     transform: scaleX(-1);
+  }
+  .contain .contain-2 .contain-2-3.lazy {
+    background-image: none;
+    background-color: #F9F9F9;
   }
 
   .offre-container {
@@ -1693,11 +1761,23 @@ body {
   .offre-container .offre .offre-photo.offre-photo-1 {
     background: url("./assets/img/offre1.jpg") top center/cover no-repeat;
   }
+  .offre-container .offre .offre-photo.offre-photo-1.lazy {
+    background-image: none;
+    background-color: #F9F9F9;
+  }
   .offre-container .offre .offre-photo.offre-photo-2 {
     background: url("./assets/img/offre2.jpg") top center/cover no-repeat;
   }
+  .offre-container .offre .offre-photo.offre-photo-2.lazy {
+    background-image: none;
+    background-color: #F9F9F9;
+  }
   .offre-container .offre .offre-photo.offre-photo-3 {
     background: url("./assets/img/offre3.jpg") top center/cover no-repeat;
+  }
+  .offre-container .offre .offre-photo.offre-photo-3.lazy {
+    background-image: none;
+    background-color: #F9F9F9;
   }
   .offre-container .offre .offre-info {
     position: absolute;
@@ -1713,8 +1793,8 @@ body {
     left: 50px;
     right: 50px;
     top: 60px;
-    font: normal normal 600 20px/27px;
-    font-size: 20px;
+    font-size: 2rem;
+    font-weight: 600;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
@@ -1725,8 +1805,7 @@ body {
     top: 135px;
     right: 50px;
     margin-top: 10px;
-    font: normal normal normal 14px/24px;
-    font-size: 12px;
+    font-size: 1.2rem;
     letter-spacing: 0px;
     color: #624835;
     opacity: 1;
@@ -1747,15 +1826,14 @@ body {
     align-items: center;
   }
   .offre-container .offre .offre-info .offre-text2 .offre-text2-prix {
-    font: normal normal 300 24px/33px Open Sans;
-    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 300;
     letter-spacing: 0px;
     color: #624835;
     opacity: 1;
   }
   .offre-container .offre .offre-info .offre-text2 .offre-text2-jour {
-    font: normal normal normal 12px/20px Open Sans;
-    font-size: 12px;
+    font-size: 1.2rem;
     letter-spacing: 0px;
     color: #624835;
     opacity: 1;
@@ -1777,6 +1855,11 @@ body {
     text-align: center;
     height: 45px;
     line-height: 45px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    color: #FFFFFF;
+    opacity: 1;
   }
 
   .footer {
@@ -1792,6 +1875,15 @@ body {
     background: url("./assets/img/logo.png") top center/cover no-repeat;
     width: 154px;
     height: 71px;
+  }
+  .footer .footer-photo.lazy {
+    background-image: none;
+    background-color: #F9F9F9;
+  }
+
+  .photo.lazy {
+    background-image: none;
+    background-color: #F9F9F9;
   }
 }
 
